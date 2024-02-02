@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+@import "navbar.css";
+@import "buttons.css";
+
+#content {
+    width: 99vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1.4fr 3.2fr 1.4fr;
+    grid-template-rows: 2.7fr 10fr 4.5fr; /* Updated the second row to be 80% of its original height */
+    /* gap: 0px 0px; */
+    grid-auto-flow: row;
+}
+
+
+body {
+    background: #272727;
+    font-family: "Montserrat", sans-serif;
+    /* height: 100%; */
+    /* overflow: hidden; */
+}
+
+/* #invox{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: #00000000;
+} */
+/* #screenshotArea{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-color: #00000000;
+} */
+
+/* Top Area */
+
+#toolButtons {
+    grid-column: 1/4;
+    grid-row: 1;
+
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* #whiteboardButton,
+#bubbleButton,
+#screenshotButton {
+    margin: 0 10px;
+} */
+
+/* Middle Area */
+
+#screenshotbox {
+    grid-column: 1;
+    grid-row: 1/3;
+    background-color: #272727;
+    justify-self: right;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+}
+
+#screenShot {
+    grid-column: 1;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    float: right;
+}
+    /* #invbox {
+    grid-column:  1/4;
+    grid-row: 2/3;
+    grid-area: notes;
+    background-color: rgba(157, 60, 60, 0);
+    width: 100%;
+    height: 100%;
+} */
+
+/* img {
+    image-orientation: inherit;
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    height: 100%;
+    width: 80%;
+    right: 100%;
+} */
+
+#download {
+    grid-column: 2/4;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+/* inside download */
+#noteContainer {
+    grid-column: 2;
+    grid-row: 1/3;
+    float: right;
+    border: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+  
+  /* inside note */
+#note {
+    height: 100%;
+    width: 100%;
+    float: left;
+    overflow-y: hidden;
+    /* margin-left: 5%; */
+    resize: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: #ffe2d6;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* padding: 3px; */
+    margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: #ff7824;
+}
+
+textarea::placeholder {
+    color: #ff7824;
+}
+
+/* Bottom Area */
+
+ #clientPreview { 
+    grid-column: 1;
+    grid-row: 3;
+    align-self: center; 
+    background-color: #ff7824;
+    /* margin: 3px 0px; */
+    border: 2px solid white;
+    width: 95%;
+    height: 95%;
+    /* padding: 3%; */
+}
+video {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+}
+
+#questionContainer {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    /* margin: 40px; */
+    width: 100%;
+    /* height: 80%; */
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+#questionText {
+    margin-top: 5%;
+    resize: none;
+    overflow-y: hidden;
+    width: 75%;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: #ffe2d6;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 3px;
+}
+
+#submitButton {
+    /* justify-self: auto; */
+    display: flex;
+    justify-self: center;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-left: 5%; */
+    border: none;
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    margin-right: 5%;
+}
+
+
+#saveButton {
+    grid-column: 3;
+    grid-row: 3;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    border: none;
+    margin: 40px;
+    margin-right: 100px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+/* javascript not working */
+/* Chat GPT gave this code for the classes: */
+.bubble {
+  position: absolute;
+  width: 200px;
+  background-color: #3498db;
+  border-radius: 10px;
+  cursor: move;
+}
+
+.handle {
+  width: 100%;
+  height: 20px;
+  background-color: #2980b9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: move;
+}
+
+.content {
+  /* padding: 10px; */
+  color: #ffffff;
+  /* user-select: none; */
+}
+
+body {
+    overflow: hidden; /* Hide scrollbars */
+  }
